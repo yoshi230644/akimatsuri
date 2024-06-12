@@ -1,0 +1,53 @@
+{
+    "quiz": [
+      {
+        "question": "近所の散歩道や公園をVlogに撮影しました。どうする？",
+        "answers": [
+          {"option": "そのままアップする", "correct": false},
+          {"option": "場所がバレないように加工する", "correct": true}
+        ],
+        "note": "SNSに写真を載せるときは、思わぬ情報漏れに注意しよう。"
+      },
+      {
+        "question": "有名なマネージメント会社からスカウトのDMが届きました。どうする？",
+        "answers": [
+          {"option": "すぐにリンクをクリックして返信", "correct": false},
+          {"option": "本当に存在する会社か確認する", "correct": true}
+        ],
+        "note": "偽アカウントや架空のアカウントに気をつけて確認しよう。"
+      },
+      {
+        "question": "長いURLを友達と共有したいとき、どうする？",
+        "answers": [
+          {"option": "無料のURL短縮サービスを使う", "correct": false},
+          {"option": "公式の機能を使うか、リンクの表示を工夫する", "correct": true}
+        ],
+        "note": "短縮URLは悪用されやすいので、安全なサービスか確認しよう。"
+      },
+      {
+        "question": "友達から無料できれいに写真加工できるプリを教わった。どうする？",
+        "answers": [
+          {"option": "すぐにダウンロードする", "correct": false},
+          {"option": "安全なアプリかどうか、詳しい人に確認してもらう", "correct": true}
+        ],
+        "note": "スパムアプリの可能性もあるので注意が必要です。"
+      },
+      {
+        "question": "親しみを持ってもらうために、自分の出身小学校についてどうする？",
+        "answers": [
+          {"option": "詳しく紹介する", "correct": false},
+          {"option": "紹介しない", "correct": true}
+        ],
+        "note": "プライバシー情報は簡単にネットで公開しないようにしよう。"
+      },
+      {
+        "question": "YouTube撮影用の機材を無料でプレゼント！申し込みリンクはこちら！どうする？",
+        "answers": [
+          {"option": "すぐに申し込む", "correct": false},
+          {"option": "信頼できる会社の、本物のキャンペーンか確認する", "correct": true}
+        ],
+        "note": "SNSの怪しいリンクには気をつけよう（ワンクリック詐欺、フィッシング）。"
+      }
+    ]
+  }
+  

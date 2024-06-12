@@ -1,0 +1,275 @@
+@charset "UTF-8";
+
+/* font family
+"Noto Serif JP", serif; 
+"Reggae One", system-ui;
+*/
+
+/* color
+蘇芳 #9e3d3f
+桔梗色 #5654a2
+白っぽい #ddcac7
+桜  #fef4f4
+黒檀　　#250d00
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    height: 100vh;
+    background: url('../img/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    cursor: none;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    cursor: none;
+}
+
+#quiz-title {
+    top: 5%;
+    /* background: rgba(254, 244, 244, 0.7); */
+    background: linear-gradient(to right, #fada67, #d44848);
+    color: #302833;
+    margin: 5% 0 3% 0;
+    padding: 20px;
+    height: 4rem;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 62%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-family: "Reggae One", system-ui;
+}
+
+#quiz-container {
+    top: 5%;
+    height: 60%;
+    background: rgba(254, 244, 244, 0.7);
+    padding: 20px;
+    border-radius: 15px;
+    border: dashed 5px #824880;
+    box-shadow: 0 0 0 10px rgba(254, 244, 244, 0.7);
+    width: 60%;
+    text-align: center;
+}
+
+#question-container {
+    font-weight: bold;
+    font-family: "Noto Serif JP", serif;
+    font-size: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+    color: #1d191f;
+    line-height: 1.5em;
+}
+
+#answers-container {
+    height: 50%;
+}
+
+#note-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Reggae One", system-ui;
+    font-weight: bold;
+    font-size: 1.4em;
+    color: rgba(254, 244, 244, 0.9);
+    margin-top: 3%;
+    margin-left: 9%;
+    width: 80%;
+    height: fit-content;
+    padding: 30px 15px 15px 15px;
+    background-color: #6c2c2f;
+    box-shadow: 3px 1px 4px rgba(0, 0, 0, 0.2);
+    /* border-radius: 8px; */
+
+}
+
+#note-container::before {
+    position: absolute;
+    width: 95%;
+    top: 0.5em;
+    border-top: dotted 8px #dddcd6;
+    content: '';
+}
+
+button {
+    position: relative;
+    margin: 0 10px 0 20px;
+    padding: 10px;
+    border: none;
+    background-color: rgba(197, 159, 83, 0.1);
+    color: #302833;
+    border-radius: 8px;
+    width: 40%;
+    height: 100%;
+    font-family: "Noto Serif JP", serif;
+    font-weight: 900;
+    font-size: 1.5rem;
+    text-shadow: #FC0 1px 0 10px;
+    vertical-align: top;
+    line-height: 1.5;
+    cursor: none;
+}
+
+button:hover {
+    color: #FFF1CF;
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+button.leftBtn {
+    background-image: url(../img/akamaru.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+button.rightBtn {
+    background-image: url(../img/aomaru.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.answerOP {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Noto Serif JP", serif;
+    font-weight: 900;
+    font-size: 12rem;
+    color: #e99937;
+    z-index: 5;
+    line-break: strict;
+}
+
+#next-button {
+    position: relative;
+    left: 40%;
+    margin-top: 3%;
+    padding-right: 20px;
+    height: 3.5rem;
+    width: 10rem;
+    clip-path: polygon(0 13%, 75% 13%, 75% 0, 100% 50%, 75% 100%, 75% 85%, 0 85%);
+    background-color: #302833;
+    color: #fff;
+    font-size: 1rem;
+    display: none;
+    z-index: 10;
+}
+
+#next-button:hover {
+    background-color: #9d5b8b;
+    animation: none;
+}
+
+.cursor {
+    position: fixed;
+    width: 128px;
+    height: 128px;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+.maru {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -10px 0 0 0;
+    transform: translate(-50%, -50%);
+    content: "〇";
+    color: #b7282e;
+    opacity: 0.5;
+    z-index: 20;
+    font-weight: bold;
+    font-size: 15rem;
+    font-weight: 950;
+    filter: brightness(150%);
+    -webkit-text-stroke: 5px #b7282e;
+}
+
+.batsu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -10px 0 0 0;
+    transform: translate(-50%, -50%);
+    content: "〇";
+    color: #19448e;
+    opacity: 0.5;
+    z-index: 20;
+    font-weight: bold;
+    font-size: 15rem;
+    font-weight: 950;
+    filter: brightness(150%);
+    -webkit-text-stroke: 5px #19448e;
+}
